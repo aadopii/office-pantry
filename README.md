@@ -11,7 +11,7 @@ You need Node.js 24, npm, and model access through Eve's ChatGPT login. Catena c
 1. Download the implementation and install the pinned dependencies.
 
    ```sh
-   git clone --branch feat/office-pantry https://github.com/aadopii/office-pantry.git
+   git clone https://github.com/aadopii/office-pantry.git
    cd office-pantry
    npm ci
    ```
@@ -42,6 +42,23 @@ You need Node.js 24, npm, and model access through Eve's ChatGPT login. Catena c
    ```
 
    The report says `simulated: true`. Stop Eve with Ctrl+C when finished. Stop a running demo before running evals, since Eve uses one development server per project.
+
+## Make it your own
+
+You can run, modify, and share Office Pantry under the MIT license. Cloning the repository is enough to try it. Fork it if you want your own copy on GitHub to save changes or share improvements.
+
+1. Select **Fork** on the [GitHub repository](https://github.com/aadopii/office-pantry).
+2. Clone your fork, replacing `YOUR_GITHUB_USERNAME` with your GitHub username.
+
+   ```sh
+   git clone https://github.com/YOUR_GITHUB_USERNAME/office-pantry.git
+   cd office-pantry
+   npm ci
+   npm run demo
+   ```
+
+3. Sign in through Eve using your own model account when prompted. The simulation needs no Catena account and sends no money.
+4. To try real payments, follow the setup below using your own Catena account, funds, recipient, and authorization. A fork does not include the original operator's credentials, money, or purchase records.
 
 ## Prices, limits, and approval
 
