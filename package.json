@@ -1,0 +1,40 @@
+{
+  "name": "office-pantry",
+  "version": "0.1.0",
+  "description": "A small office snack purchasing agent using Eve and Catena.",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env scripts/dev.ts",
+    "check": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts",
+    "preflight": "node --env-file-if-exists=.env --import tsx scripts/preflight.ts",
+    "ledger": "node --env-file-if-exists=.env --import tsx scripts/ledger.ts",
+    "build": "eve build --skip-sandbox-prewarm",
+    "info": "eve info --json",
+    "smoke:live": "node --env-file-if-exists=.env --import tsx scripts/live-smoke.ts",
+    "demo": "node --import tsx scripts/fake.ts dev",
+    "eval": "node --import tsx scripts/fake.ts eval",
+    "report": "node --env-file-if-exists=.env --import tsx scripts/report.ts",
+    "reports": "node --env-file-if-exists=.env --import tsx scripts/report.ts --list",
+    "demo:report": "node --import tsx scripts/fake.ts report",
+    "demo:ledger": "node --import tsx scripts/fake.ts ledger",
+    "schedule": "node --env-file-if-exists=.env --import tsx scripts/schedule.ts"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "@catena/sdk": "0.5.0",
+    "eve": "0.67.2",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.3",
+    "node": "24.21.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  }
+}
